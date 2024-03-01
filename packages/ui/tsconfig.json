@@ -5,8 +5,8 @@
     "paths": {
       "@ui/*": ["./src/*"]
     },
-    "outDir": "dist"
+    "rootDir": "./src",
   },
-  "include": ["src", "tailwind.config.js"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src"],
+  "exclude": ["node_modules"]
 }

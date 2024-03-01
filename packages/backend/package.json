@@ -1,14 +1,13 @@
 {
-  "name": "server",
+  "name": "backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
-    "start": "node dist/index.js",
-    "lint": "eslint . --max-warnings 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon --watch src --exec ts-node src/server.ts",
+    "start": "node dist/server.js"
   },
   "keywords": [],
   "author": "",
