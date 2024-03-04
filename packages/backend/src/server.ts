@@ -1,12 +1,20 @@
-import express from 'express';
+import dotenv from "dotenv"
+dotenv.config()
+import express from "express";
+import { createServer } from "http";
+import { initWs } from "./ws";
+import { initHttp } from "./http";
+import cors from "cors";
+
 
 const app = express();
-const port = 3003;
+app.use(cors());
+app.use(express.json());
+const server = createServer(app);
+initWs(server);
+initHttp(app);
 
-app.get('/', (req, res) => {
-  res.send('Hello World!');
-});
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
+const PORT = process.env.PORT || 3003;
+server.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
