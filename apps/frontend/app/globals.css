@@ -35,13 +35,13 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+
+  background-color: #151515;
+  color: white;
+  zoom: 1;
+  margin: 0;
 }
 
 a {
